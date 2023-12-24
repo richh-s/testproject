@@ -55,7 +55,7 @@ const Header = ({isLoginPage }) => {
         </div>
 
         {isPopupVisible && (
-      <div className="w-3/4 h-full flex items-center bg-[#F2F3F8] bg-opacity-75 text-white p-4 rounded-lg shadow-lg transform transition-transform ease-out duration-500">
+      <div className="w-4/4 h-full flex items-center bg-[#F2F3F8] bg-opacity-75 text-white p-4 rounded-lg shadow-lg transform transition-transform ease-out duration-500">
       <div className="w-full">
         <div className="flex mb-4">
           <button className="flex-grow bg-blue-500 text-white py-2 px-2 rounded-3xl mr-2 transition-transform ease-out duration-300 hover:scale-105">
