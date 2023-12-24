@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import poster2 from '../../assets/poster2.png';
 
 const HomePoster = () => {
-  // Assuming the first dot is active
-  const activeDotIndex = 0;
+  const [activeDotIndex, setActiveDotIndex] = useState(0);
+
+  useEffect(() => {
+    // Function to increment the active dot index and loop back to 0 after reaching the last dot
+    const interval = setInterval(() => {
+      setActiveDotIndex((prevIndex) => (prevIndex + 1) % 4);
+    }, 4000); // 4 seconds
+
+    return () => clearInterval(interval); // Cleanup the interval on component unmount
+  }, []);
 
   return (
     <div className="max-w-md mx-auto relative">
@@ -58,4 +66,3 @@ const HomePoster = () => {
 };
 
 export default HomePoster;
-
