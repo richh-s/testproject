@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
-import GamePoster from '../GamePoster/GamePoster';
-import HomePoster from '../Home/HomePoster';
+
 import { useDispatch,useSelector } from 'react-redux';
 import { togglePopup, toggleHomePoster, toggleGamePoster } from '../redux/action';
 
@@ -9,7 +8,7 @@ const Header = ({isLoginPage }) => {
   const dispatch = useDispatch();
   const isPopupVisible = useSelector((state) => state.isPopupVisible);
   const isGamePosterVisible = useSelector((state) => state.isGamePosterVisible);
-  const isHomePosterVisible = useSelector((state) => state.isHomePosterVisible);
+ 
 
   const togglePopupHandler = () => {
     // Toggle visibility of the popup
